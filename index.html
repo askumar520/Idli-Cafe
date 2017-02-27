@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <base href="/"> <!-- base elements tells the router how to compose the navigation urls, here we mention a "/" as this is our starting page -->
+    <title>Idli Only Cafe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="app/app.component.css" rel="stylesheet" />
+
+    <!-- Polyfill(s) for older browsers /browser compatibility  -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <img class="img-responsive" src="app/assets/logo.jpg" id="logo_img" alt="Idli Cafe logo" >
+    </div>
+    <img class="img-responsive" src="app/assets/intro_img.png" id="banner" alt="Idli Cafe Intro" >
+</header>
+
+<ic-app>Loading App...</ic-app>
+
+<div class=".container-fluid">
+    <footer >
+        <div class="row">
+            <div id="left" class="col-xs-6 col-sm-6 col-lg-6">
+                <p class="footer">We are located at: <br />
+                    64-A Jalan Maarof, Bangsar Baru, 59000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia</p>
+                <p class="footer">
+                    Call us at: 03&nbsp;2284&nbsp;0522
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
